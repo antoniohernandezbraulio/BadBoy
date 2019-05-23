@@ -19,11 +19,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Bootstrap 4 y librerías necesarias
+//bootstrap 4.3.1 and lib
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist'));
 app.use('/js', express.static(__dirname + '/node_modules/popper.js/dist'));
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js'));
+app.use('/img', express.static(__dirname + '/public/images'));
+app.use('/css', express.static(__dirname + '/public/stylesheets'));
+app.use('/jss', express.static(__dirname + '/public/javascripts'));
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

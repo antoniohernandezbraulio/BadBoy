@@ -1,5 +1,51 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  nav#menu.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-default
+    a.navbar-brand(href='#')
+      img.d-inline-block.align-top(src='/img/logo.png', width='80', height='40', alt='')
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    .container
+      #navbarSupportedContent.collapse.navbar-collapse.justify-content-end
+        ul.navbar-nav.m-auto
+          li.nav-item.active
+            a.nav-link(href='#', style='color:gray;')
+              | Home
+              span.sr-only (current)
+          li.nav-item
+            a.nav-link(href='#', style='color:gray;') Our Company
+          li.nav-item
+            a.nav-link(href='#', style='color:gray;') Our products
+          li.nav-item
+            a.nav-link(href='#', style='color:gray;') Contact
+          li.nav-item
+            a.nav-link(href='#', style='color:gray;') Help
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href='#', style='color:gray;')
+              i.fa.fa-user
+              |  Log in
+        form.form-inline
+          button.btn.btn-info(type='button', style='color:gray;') Sign up
+
+  #carouselExampleFade.carousel.slide.carousel-fade(data-ride='carousel')
+    .carousel-inner
+      .carousel-item.active
+        img.d-block.w-100(src='img/1.jpg', alt='...')
+        .mensaje
+          .contenedor
+            .contiene.font-weight-bold(style='color: white;')
+              h5 xBadBoy
+              p
+              h3 Enthusiasm move the world and we going to move yours
+              p
+      .carousel-item
+        img.d-block.w-100(src='img/2.jpg', alt='...')
+    a.carousel-control-prev(href='#carouselExampleFade', role='button', data-slide='prev')
+      span.carousel-control-prev-icon(aria-hidden='true')
+      span.sr-only Previous
+    a.carousel-control-next(href='#carouselExampleFade', role='button', data-slide='next')
+      span.carousel-control-next-icon(aria-hidden='true')
+      span.sr-only Next
+
