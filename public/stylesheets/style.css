@@ -9,15 +9,15 @@
 }
 .mensaje {
  position: absolute;
- left: 10px;
+ left: 60%;
  right: 0;
- top: 26%;
+ top: 60%;
  margin: 0 auto;
  z-index: 9999999;
 
 }
 .contenedor{
-width: 50%;
+width: 90%;
 background-color: #6E6C6C;
 border-radius: 3px 3px 3px 3px;
 -moz-border-radius: 3px 3px 3px 3px;
