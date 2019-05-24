@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  .container.log
+    .row.justify-content-center
+      .col-4
+        .p-2.bd-highlight
+          br
+          input.btn.btn-primary(type='button', name='', value='Iniciar sesion con Facebook', style='height:45px;width:100%;')
+          br
+          br
+          input.btn.btn-info(type='button', name='', value='Iniciar sesion con Twitter', style='height:45px;width:100%;')
+          br
+          hr
+          input.form-control(type='text', placeholder='Your email ', name='', value='', style='height:54px;')
+          br
+          input.form-control(type='password', placeholder='Your password', name='', value='', style='height:54px;')
+          br
+          input.btn.btn-success(type='button', name='', value='Inicia sesión', style='height:45px;width:100%;')
+          br
+          br
+          a(href='#') ¿Olvidaste tu contraseña?
+          label(for='') ¿Aun o tienes cuenta en XBadBoy?
+          br
+          input.btn.btn-outline-primary(type='button', name='', value='Registrate', style='width:100%;')
+          br
+          br
+          
+  script(type='text/javascript').
+    window.onload = function() {
+    $("#menu").addClass("bg-dark");
+    };

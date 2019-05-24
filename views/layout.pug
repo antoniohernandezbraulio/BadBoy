@@ -9,8 +9,32 @@ html
 
   body
     block content
+    nav#menu.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-default
+      .container
+        a.navbar-brand(href='#')
+          img.d-inline-block.align-top(src='/img/logo.png', width='80', height='40', alt='')
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse.justify-content-end
+          ul.navbar-nav.m-auto
+            li.nav-item.active
+              a.nav-link(href='/', style='color:white;')
+                | Home
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link(href='company', style='color:white;') Our Company
+            li.nav-item
+              a.nav-link(href='contact', style='color:white;') Contact
+            li.nav-item
+              a.nav-link(href='help', style='color:white;') Help
+          ul.navbar-nav
+            li.nav-item
+              a.nav-link(href='login', style='color:white;')
+                i.fa.fa-user
+                |  Log in
+          form.form-inline
+            a.btn.btn-info(href='sign', style='color:white;') Sign up
 
-    
     script(src='/js/jquery.min.js')
     script(src='/js/bootstrap.min.js')
     script(src='/jss/carouselindex.js')
